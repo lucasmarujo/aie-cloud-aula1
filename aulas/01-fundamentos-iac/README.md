@@ -4,33 +4,40 @@
 
 Ao final desta aula, você será capaz de:
 
-- Explicar o que é cloud computing e os modelos de serviço (IaaS, PaaS, SaaS).
+- Explicar o que é cloud computing e os modelos de serviço (IaaS, PaaS, SaaS, FaaS).
 - Comparar as três grandes nuvens (Azure, AWS, GCP) e suas equivalências.
-- Discutir estratégia de cloud: escalabilidade horizontal vs vertical, balanceamento de carga, alta disponibilidade.
+- Discutir estratégia de cloud: escalabilidade horizontal vs vertical, balanceamento de carga, alta disponibilidade, os 6 Rs de migração.
 - Provisionar recursos no Azure de três formas: portal, CLI (`az`) e IaC (Terraform/Bicep).
-- Aplicar boas práticas iniciais de segurança (RBAC, gestão de identidade).
+- Aplicar boas práticas iniciais de segurança (RBAC e princípio do menor privilégio).
+- Aplicar idempotência e ciclo `init → plan → apply → destroy` do Terraform.
 
 ---
 
 ## Conexão com o Quantum Commerce
 
-Nesta aula você é apresentado ao **case Quantum Commerce** e propõe uma **arquitetura cloud de alto nível** que sua equipe irá construir ao longo das 6 aulas. Veja [quantum-commerce/](../../quantum-commerce/).
+Nesta aula você é apresentado ao **case Quantum Commerce** e propõe, em grupo, uma **arquitetura cloud de alto nível** que será construída ao longo das 6 aulas. O `main.tf` que você cria hoje é o embrião da infra QC — nas aulas seguintes ele ganha storage, bancos, funções, serviços cognitivos e MLOps.
+
+Veja [quantum-commerce/](../../quantum-commerce/) para o briefing do case.
 
 ---
 
 ## Material da aula
 
-> Em construção — disponível antes da aula.
-
-- `lab/` — Roteiro do laboratório passo a passo
-- `exercicios/` — Exercícios em 3 níveis (básico, intermediário, avançado)
+| Arquivo | Quando usar |
+|---------|-------------|
+| [pre-aula.md](pre-aula.md) | **Antes da aula** — checklist de 15-30 min |
+| [lab/guia-lab.md](lab/guia-lab.md) | Durante a aula — roteiro das 6 atividades de laboratório |
+| [lab/terraform/](lab/terraform/) | Código Terraform pronto da Atividade 5 |
+| [exercicios.md](exercicios.md) | Após a aula — exercícios em 3 níveis (🟢/🟡/🔴) |
+| [pos-aula-git.md](pos-aula-git.md) | Após a aula — tutorial obrigatório de Git/GitHub sem instalar nada |
 
 ---
 
 ## Pré-requisitos
 
-Faça o [SETUP.md](../../SETUP.md) antes da aula:
+Faça o [SETUP.md](../../SETUP.md) e o [pre-aula.md](pre-aula.md) antes da aula:
 
-- [ ] Azure for Students ativado
+- [ ] Azure for Students ativado (`@fiap.com.br`)
 - [ ] Cloud Shell aberto e funcionando
-- [ ] Repositório clonado
+- [ ] Repositório clonado/forkado
+- [ ] `terraform`, `bicep`, `az`, `python3`, `git` respondendo no Cloud Shell
